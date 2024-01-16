@@ -60,7 +60,8 @@ const Calendars = () => {
   };
 
   const dateToday = new Date();
-  console.log(dateToday);
+  const tommorow = new Date(dateToday.getTime() + 86400000);
+  // console.log(dateToday);
 
   // const state = useSelector((state) => state.detail);
   useEffect(() => {
@@ -93,7 +94,7 @@ const Calendars = () => {
           selectsRange={true}
           startDate={startDate}
           endDate={endDate}
-          minDate={dateToday}
+          minDate={tommorow}
           shouldCloseOnSelect={false}
           open={pickDate}
           dateFormat={"d MMM yyyy"}
